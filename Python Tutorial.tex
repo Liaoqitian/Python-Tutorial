@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{sectsty}
+\usepackage{amssymb}
+ \usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{romannum}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage[super]{nth}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+
+\setlist[itemize,1]{leftmargin=\dimexpr 26pt-.5in}
+
+
+\sectionfont{\fontsize{12}{15}\selectfont}
+\title{Introduction to Complex Analysis}
+\author{Qitian Liao}
+\date{Aug 3, 2020} 
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\setlength\parindent{0pt}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+
+\begin{document}
+%\pagenumbering{gobble}
+\maketitle
+\newpage
+\tableofcontents
+\def\Arg{\mathop{\operator@font Arg}\nolimits}
+%\newpage
+\pagenumbering{arabic}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\titlespacing\section{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{10pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
