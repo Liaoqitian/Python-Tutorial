@@ -12,9 +12,9 @@
 \contentsline {section}{\numberline {3}Control}{8}%
 \contentsline {subsection}{\numberline {3.1}Defining Functions}{8}%
 \contentsline {subsubsection}{\numberline {3.1.1}Environmental Diagrams}{8}%
+\contentsline {subsubsection}{\numberline {3.1.2}Life Cycle of a User-Defined Function}{9}%
 \contentsline {subsection}{\numberline {3.2}Conditional Statement}{9}%
 \contentsline {subsubsection}{\numberline {3.2.1}Compound Statements}{9}%
-\contentsline {subsubsection}{\numberline {3.2.2}Conditional Statements}{9}%
-\contentsline {subsubsection}{\numberline {3.2.3}Boolean Contexts}{9}%
-\contentsline {subsection}{\numberline {3.3}Iteration}{10}%
-\contentsline {subsubsection}{\numberline {3.3.1}While Statements}{10}%
+\contentsline {subsubsection}{\numberline {3.2.2}Conditional Statements}{10}%
+\contentsline {subsection}{\numberline {3.3}Boolean Contexts and Operators}{10}%
+\contentsline {subsection}{\numberline {3.4}Exercises}{10}%
