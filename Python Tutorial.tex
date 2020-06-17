@@ -13,11 +13,13 @@
 \usepackage{tikz}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{pagecolor,lipsum}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
+\pagecolor{white}
+\graphicspath{ {./images/} }
 \lstset{frame=tb,
   language=Python,
   aboveskip=3mm,
@@ -310,9 +312,10 @@ Look at the following example.
 		return mul(x, x)
 >>> square(square(3))
 \end{lstlisting} 
-The corresponding environmental diagram is on the next page.\\
-\begin{figure}[h!]
-\includegraphics[width=\linewidth]{Lec3.png}
+The corresponding environmental diagram is on the next page. \\
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Lec3} 
+\centering
 \end{figure}
 \newline
 Sometimes we will have very complicated function calls, and environmental diagrams will come in very handy at that time. Look at the following example. (credit to CS61A Midterm Spring 2015). We will try to solve this after we cover higher order functions. 
@@ -362,6 +365,10 @@ Execution Rule for a sequence of statements:
 \end{enumerate} 
 \subsubsection{Conditional Statements}
 We start with the following example with 1 statement, 3 clauses, 3 headers, and 3 suites. 
+\begin{figure}[h]
+\includegraphics[scale=1]{statement} 
+\centering
+\end{figure}
 \begin{lstlisting}
 >>> def abs(x): 
 ...     if x < 0: 
@@ -383,11 +390,55 @@ Each clause is considered in order.
 \item Zero or more "elif" clauses. 
 \item Zero or one "else" clause, always at the end.  
 \end{enumerate}
-
 \subsection{Boolean Contexts and Operators}
-Python supports three boolean operators: \textbf{and}, \textbf{or}, and \textbf{not}: \\
+Python supports three boolean operators: \textbf{and}, \textbf{or}, and \textbf{not}. 
+\begin{lstlisting}
+>>> a = 4
+>>> a < 2 and a > 0
+False
+>>> a < 2 or a > 0 
+True 
+>>> not (a > 0) 
+False
+\end{lstlisting}
+\begin{enumerate}
+\item \textbf{and} evaluates to \textbf{True} only if both operands evaluate to \textbf{True}. If at least one operand is \textbf{False}, then and evaluates to \textbf{False}.
+\item \textbf{or} evaluates to \textbf{True} if at least one operand evaluates to \textbf{True}. If both operands are \textbf{False}, then or evaluates to \textbf{False}.
+\item \textbf{not} evaluates to \textbf{True} if its operand evaluates to \textbf{False}. It evaluates to \textbf{False} if its operand evalutes to \textbf{True}.
+\end{enumerate}
+Let us look at a more complicated example. 
+\begin{lstlisting}
+>>> (True and (not False)) or ((not True) and False) 
+\end{lstlisting}
+Before we can solve this, we need to know that boolean operators have an order of operation: \\
+\textbf{not} have the highest priority, then \textbf{and}, lastly \textbf{or} has the lowest priority. Let us try again. \\ 
+\subsubsection{Short Circuiting}
+First, let us look at the example below. 
+\begin{lstlisting}
+>>> 1 / 0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> True or 1/0
+True
+\end{lstlisting}
+The behavior is curious. The second expression evaluates to \textbf{True} because Python's \textbf{and} and \textbf{or} operators short-circuit. That means they do not necessarily evaluate every operand. \\
+Short-circuiting happens when the operator reaches an operand that allows them to make a conclusion about the expression. For example, \textbf{and} will short-circuit as soon as it reaches the first false value because it then knows that not all the values are true. \\
+If \textbf{and} and \textbf{or} do not short-circuit, they just return the last value. Keep in mind that \textbf{and} and \textbf{or} don't always return booleans when using values other than \textbf{True} and \textbf{False}.
+\begin{figure}[h]
+\includegraphics[scale=0.5]{boolean} 
+\centering
+\end{figure}
+\newline
+\newline
 False values in Python: False, 0, '', None (more to come) \\
-True values in Python: Anything else.
+True values in Python: Anything else. 
+
+\subsection{Division}
+\begin{figure}[h]
+\includegraphics[scale=0.6]{Division} 
+\centering
+\end{figure}
 
 \iffalse
 \subsection{Iteration}
@@ -398,8 +449,52 @@ True values in Python: Anything else.
 \item If it is a true value, execute the (whole) suite, then return to step 1. 
 \end{enumerate}
 \fi
+
 \subsection{Exercises}
-\begin{enumerate}
+\begin{enumerate}[leftmargin = *]
+\item
+\begin{lstlisting}
+>>> True and 13
+______
+
+>>> False or 0
+______
+
+>>> not 10
+______
+
+>>> not None
+______
+>>> True and 1 / 0 and False
+______
+
+>>> True or 1 / 0 or False
+______
+
+>>> True and 0
+______
+
+>>> False or 1
+______
+
+>>> 1 and 3 and 6 and 10 and 15
+______
+
+>>> 0 or False or 2 or 1 / 0
+______
+>>> not 0
+______
+
+>>> (1 + 1) and 1
+______
+
+>>> 1/0 or True
+______
+
+>>> (True or False) and False
+______
+
+\end{lstlisting}
 \item Write a function that takes three positive numbers and returns the sum of the squares of the two largest numbers. \\
 \textbf{Challenge:} Use only a single line for the body of the function.  
 \begin{lstlisting}
@@ -510,16 +605,289 @@ def falling(n, k):
 \end{lstlisting}
 \end{enumerate}
 
+\newpage
+\section{Higher Order Functions}
+\subsection{Designing Functions}
+A function's \textit{domain} is the set of all inputs it might possibly take as arguments. \\
+A function's \textit{range} is the set of output values it might possibly return. \\
+A pure function's \textit{behavior} is the relationship it creates between input and output. 
+\subsection{Locally Defined Functions} 
+Functions defined within other function bodies are bound to names in a local frame. Look at the following example. 
+\begin{lstlisting}
+def make_adder(n): 
+"""Return a function that takes one argument k and returns k + n.
+>>> add_three = make_adder(3)
+>>> add_three(4)
+7
+"""
+	def adder(k):
+		return k + n
+	return adder
+\end{lstlisting} 
+Here \textit{make\_adder} is a function that returns another function. \\ 
+The name \textit{add\_three} is bound to a function. \\ 
+\textit{adder} is a def statement within another def statement. \\
+\textit{adder} can refer to names in the enclosing function. 
+\subsection{Lambda Expressions} 
+So far, each time we have wanted to define a new function, we needed to give it a name. But for other types of expressions, we do not need to associate intermediate values with a name. That is, we can compute $a*b + c*d$ without having to name the subexpressions $a*b$ or $c*d$, or the full expression. In Python, we can create function values on the fly using lambda expressions, which evaluate to unnamed functions. A lambda expression evaluates to a function that has a single return expression as its body. Assignment and control statements are not allowed. Lambda functions are not common in Python, but they are important in general. \\
+\newline
+We can understand the structure of a lambda expression by constructing a corresponding English sentence: 
+$$\underbrace{\text{lambda}}_{\text{A function that }} \underbrace{x}_{\text{ takes } x} \underbrace{:}_{\text{ and returns }} \underbrace{f(g(x))}_{ f(g(x)) }$$
+It is important that lambda functions do not have "return" keywords and it must return a single expression. 
+\begin{lstlisting}
+>>> square = lambda x: x * x
+>>> square(4)
+16
+\end{lstlisting} 
+\newpage
+\textbf{Lambda Expressions Versus Def Statements.} 
+\begin{lstlisting}
+>>> square = lambda x: x * x
+>>> def square(x):
+		return x * x	
+\end{lstlisting}
+\begin{enumerate}[leftmargin = *]
+\item Both create a function with the same domain, range, and behavior.
+\item Both bind that function to the name square. 
+\item Only the def statement gives the function an intrinsic name, which shows up inenvironment diagrams but doesn't affect execution (unless the function is printed).
+\end{enumerate}
+\begin{figure}[h]
+\includegraphics[scale=0.5]{4_1} 
+\centering
+\end{figure}
+\subsection{Exercises}
+\begin{enumerate}[leftmargin = *]
+\item 
+\begin{lstlisting}
+>>> lambda x: x  # A lambda expression with one parameter x
+______
 
+>>> a = lambda x: x  # Assigning the lambda function to the name a
+>>> a(5)
+______
 
+>>> (lambda: 3)()  # Using a lambda expression as an operator in a call exp.
+______
 
+>>> b = lambda x: lambda: x  # Lambdas can return other lambdas!
+>>> c = b(88)
+>>> c
+______
 
+>>> c()
+______
 
+>>> d = lambda f: f(4)  # They can have functions as arguments as well.
+>>> def square(x):
+...     return x * x
+>>> d(square)
+______
+\end{lstlisting}
+\newpage
+\item 
+\begin{lstlisting}
+>>> z = 3
+>>> e = lambda x: lambda y: lambda: x + y + z
+>>> e(0)(1)()
+______
 
+>>> f = lambda z: x + z
+>>> f(3)
+______
+\end{lstlisting}
 
+\item 
+\begin{lstlisting}
+>>> higher_order_lambda = lambda f: lambda x: f(x)
+>>> g = lambda x: x * x
+>>> higher_order_lambda(2)(g)  # Which argument belongs to which function call?
+______
 
+>>> higher_order_lambda(g)(2)
+______
 
+>>> call_thrice = lambda f: lambda x: f(f(f(x)))
+>>> call_thrice(lambda y: y + 1)(0)
+______
 
+>>> print_lambda = lambda z: print(z)  # When is the return expression of a lambda expression executed?
+>>> print_lambda
+______
+
+>>> one_thousand = print_lambda(1000)
+______
+
+>>> one_thousand
+______
+
+\end{lstlisting}
+
+\item
+\begin{lstlisting}
+>>> def even(f):
+...     def odd(x):
+...         if x < 0:
+...             return f(-x)
+...         return f(x)
+...     return odd
+>>> steven = lambda x: x
+>>> stewart = even(steven)
+>>> stewart
+______
+
+>>> stewart(61)
+______
+
+>>> stewart(-4)
+______
+\end{lstlisting}
+\newpage
+\item
+\begin{lstlisting}
+>>> def cake():
+...    print('beets')
+...    def pie():
+...        print('sweets')
+...        return 'cake'
+...    return pie
+>>> chocolate = cake()
+______
+
+>>> chocolate
+______
+
+>>> chocolate()
+______
+
+>>> more_chocolate, more_cake = chocolate(), cake
+______
+
+>>> more_chocolate
+______
+
+>>> def snake(x, y):
+...    if cake == more_cake:
+...        return lambda y: x + y
+...    else:
+...        return x + y
+>>> snake(10, 20)
+______
+
+>>> snake(10, 20)(30)
+______
+
+>>> cake = 'cake'
+>>> snake(10, 20)
+______
+
+\end{lstlisting}
+\newpage
+\item
+Lambdas and Currying: We can transform multiple-argument functions into a chain of single-argument, higher order functions by taking advantage of lambda expressions. This is useful when dealing with functions that take only single-argument functions. Write a function \textit{lambda\_curry2} that will curry any two argument function using lambdas. 
+\begin{lstlisting}
+def lambda_curry2(func):
+    """
+    Returns a Curried version of a two-argument function FUNC.
+    >>> from operator import add
+    >>> curried_add = lambda_curry2(add)
+    >>> add_three = curried_add(3)
+    >>> add_three(5)
+    8
+    """
+    "*** YOUR CODE HERE ***"
+    return ______
+\end{lstlisting}
+
+\item Make Adder with a Lambda: Implement the \textit{make\_adder} function below using a single return statement that returns the value of a lambda expression.
+\begin{lstlisting}
+def make_adder(n):
+    """Return a function that takes an argument K and returns N + K.
+
+    >>> add_three = make_adder(3)
+    >>> add_three(1) + add_three(2)
+    9
+    >>> make_adder(1)(2)
+    3
+    """
+    "*** YOUR CODE HERE ***"
+    return 'REPLACE ME'
+\end{lstlisting}
+\newpage
+\item Composite Identity Function: Write a function that takes in two single-argument functions, $f$ and $g$, and returns another function that has a single parameter $x$. The returned function should return True if $f(g(x))$ is equal to $g(f(x))$. You can assume the output of $g(x)$ is a valid input for $f$ and vice versa. You may use the \textit{compose1} function defined below.
+\begin{lstlisting}
+def compose1(f, g):
+    """Return the composition function which given x, computes f(g(x)).
+
+    >>> add_one = lambda x: x + 1        # adds one to x
+    >>> square = lambda x: x**2
+    >>> a1 = compose1(square, add_one)   # (x + 1)^2
+    >>> a1(4)
+    25
+    >>> mul_three = lambda x: x * 3      # multiplies 3 to x
+    >>> a2 = compose1(mul_three, a1)    # ((x + 1)^2) * 3
+    >>> a2(4)
+    75
+    >>> a2(5)
+    108
+    """
+    return lambda x: f(g(x))
+
+def composite_identity(f, g):
+    """
+    Return a function with one parameter x that returns True if f(g(x)) is
+    equal to g(f(x)). You can assume the result of g(x) is a valid input for f
+    and vice versa.
+
+    >>> add_one = lambda x: x + 1        # adds one to x
+    >>> square = lambda x: x**2
+    >>> b1 = composite_identity(square, add_one)
+    >>> b1(0)                            # (0 + 1)^2 == 0^2 + 1
+    True
+    >>> b1(4)                            # (4 + 1)^2 != 4^2 + 1
+    False
+    """
+    "*** YOUR CODE HERE ***"
+\end{lstlisting}
+\newpage
+\item 
+Define a function cycle that takes in three functions $f_1$, $f_2$, $f_3$, as arguments. cycle will return another function that should take in an integer argument $n$ and return another function. That final function should take in an argument $x$ and cycle through applying $f_1$, $f_2$, and $f_3$ to $x$, depending on what $n$ was. Here's what the final function should do to $x$ for a few values of $n$:\\
+$n = 0$, return $x$ \\
+$n = 1$, apply $f_1$ to $x$, or return $f_1(x)$ \\
+$n = 2$, apply $f_1$ to $x$ and then $f_2$ to the result of that, or return $f_2(f_1(x))$ \\
+$n = 3$, apply $f_1$ to $x$, $f_2$ to the result of applying $f_1$, and then $f_3$ to the result of applying $f_2$, or $f_3(f_2(f_1(x)))$ \\ 
+$n = 4$, start the cycle again applying $f_1$, then $f_2$, then $f_3$, then $f_1$ again, or $f_1(f_3(f_2(f_1(x))))$ \\ 
+And so forth.\\
+Hint: most of the work goes inside the most nested function.
+\begin{lstlisting}
+def cycle(f1, f2, f3):
+    """Returns a function that is itself a higher-order function.
+
+    >>> def add1(x):
+    ...     return x + 1
+    >>> def times2(x):
+    ...     return x * 2
+    >>> def add3(x):
+    ...     return x + 3
+    >>> my_cycle = cycle(add1, times2, add3)
+    >>> identity = my_cycle(0)
+    >>> identity(5)
+    5
+    >>> add_one_then_double = my_cycle(2)
+    >>> add_one_then_double(1)
+    4
+    >>> do_all_functions = my_cycle(3)
+    >>> do_all_functions(2)
+    9
+    >>> do_more_than_a_cycle = my_cycle(4)
+    >>> do_more_than_a_cycle(2)
+    10
+    >>> do_two_cycles = my_cycle(6)
+    >>> do_two_cycles(1)
+    19
+    """
+    "*** YOUR CODE HERE ***"
+\end{lstlisting}
+\end{enumerate}
 
 
 \end{document}

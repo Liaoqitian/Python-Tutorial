@@ -16,5 +16,12 @@
 \contentsline {subsection}{\numberline {3.2}Conditional Statement}{9}%
 \contentsline {subsubsection}{\numberline {3.2.1}Compound Statements}{9}%
 \contentsline {subsubsection}{\numberline {3.2.2}Conditional Statements}{10}%
-\contentsline {subsection}{\numberline {3.3}Boolean Contexts and Operators}{10}%
-\contentsline {subsection}{\numberline {3.4}Exercises}{10}%
+\contentsline {subsection}{\numberline {3.3}Boolean Contexts and Operators}{11}%
+\contentsline {subsubsection}{\numberline {3.3.1}Short Circuiting}{11}%
+\contentsline {subsection}{\numberline {3.4}Division}{12}%
+\contentsline {subsection}{\numberline {3.5}Exercises}{12}%
+\contentsline {section}{\numberline {4}Higher Order Functions}{16}%
+\contentsline {subsection}{\numberline {4.1}Designing Functions}{16}%
+\contentsline {subsection}{\numberline {4.2}Locally Defined Functions}{16}%
+\contentsline {subsection}{\numberline {4.3}Lambda Expressions}{16}%
+\contentsline {subsection}{\numberline {4.4}Exercises}{17}%

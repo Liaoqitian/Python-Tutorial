@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{sectsty}
+\usepackage{amssymb}
+ \usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{romannum}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage[super]{nth}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pagecolor,lipsum}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\pagecolor{white}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\setlist[itemize,1]{leftmargin=\dimexpr 26pt-.5in}
+
+\sectionfont{\fontsize{12}{15}\selectfont}
+\title{Introduction to Programming with Python}
+\author{Qitian Liao}
+\date{Aug 3, 2020} 
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\setlength\parindent{0pt}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+\begin{document}
+%\pagenumbering{gobble}
+\maketitle
+\newpage
+\tableofcontents
+\def\Arg{\mathop{\operator@font Arg}\nolimits}
+%\newpage
+\pagenumbering{arabic}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\titlespacing\section{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{10pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{5pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+
+
+\section{Exercises}
+For each of the expressions below, write the output displayed by the interactive Python interpreter when the expression is evaluated. The output may have multiple lines. If an error occurs, write "Error", but include all output displayed before the error. If a function is displayed, write "Function". \\
+Recall: The interactive interpreter displays the value of a successfully evaluated expression, unless it is \textbf{None}. 
+\begin{lstlisting}
+>>> print(1, print(2))
+\end{lstlisting}
+\begin{lstlisting}
+>>> print(None, print(None))
+\end{lstlisting}
+\begin{lstlisting}
+>>> print(print(print(2)), print(3))
+\end{lstlisting}
+\begin{lstlisting}
+>>> print(4, 5) + 1
+\end{lstlisting}
+
+
+
+\end{document}

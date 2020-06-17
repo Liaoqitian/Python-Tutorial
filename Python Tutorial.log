@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  11 JUN 2020 01:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  17 JUN 2020 01:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -563,6 +563,29 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pagecolor/pagecolor.sty
+Package: pagecolor 2017/05/29 v1.0i Provides thepagecolor (HMM)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
+\GPT@outputbox=\box64
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -571,10 +594,7 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-))
+)
 \Gm@cnth=\count297
 \Gm@cntv=\count298
 \c@Gm@tempcnt=\count299
@@ -591,26 +611,26 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 (./Python Tutorial.aux)
 \openout1 = `"Python Tutorial.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count300
 \scratchdimen=\dimen287
-\scratchbox=\box64
+\scratchbox=\box65
 \nofMPsegments=\count301
 \nofMParguments=\count302
 \everyMPshowfont=\toks37
@@ -669,12 +689,12 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -687,76 +707,132 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `"Python Tutorial.toc"'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 74--79
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
+Underfull \hbox (badness 10000) in paragraph at lines 111--116
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
 [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 177--182
+Underfull \hbox (badness 10000) in paragraph at lines 179--184
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 238--241
+Underfull \hbox (badness 10000) in paragraph at lines 240--243
 
  []
 
 [6] [7]
-<Lec3.png, id=38, 646.415pt x 370.38374pt>
-File: Lec3.png Graphic file (type png)
-<use Lec3.png>
-Package pdftex.def Info: Lec3.png  used on input line 315.
-(pdftex.def)             Requested size: 500.484pt x 286.7675pt.
+<./images/Lec3.jpg, id=38, 646.415pt x 370.38374pt>
+File: ./images/Lec3.jpg Graphic file (type jpg)
+<use ./images/Lec3.jpg>
+Package pdftex.def Info: ./images/Lec3.jpg  used on input line 317.
+(pdftex.def)             Requested size: 452.48741pt x 259.26685pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <./Lec3.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 434--444
+[8] [9 <./images/Lec3.jpg>]
+<./images/statement.jpg, id=47, 476.78125pt x 336.25626pt>
+File: ./images/statement.jpg Graphic file (type jpg)
+<use ./images/statement.jpg>
+Package pdftex.def Info: ./images/statement.jpg  used on input line 369.
+(pdftex.def)             Requested size: 476.78008pt x 336.25543pt.
+ [10 <./images/statement.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 413--415
+
+ []
+
+<./images/boolean.jpg, id=52, 864.22874pt x 128.48pt>
+File: ./images/boolean.jpg Graphic file (type jpg)
+<use ./images/boolean.jpg>
+Package pdftex.def Info: ./images/boolean.jpg  used on input line 429.
+(pdftex.def)             Requested size: 432.11331pt x 64.23984pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--444
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11]
+<./images/Division.jpg, id=56, 899.36pt x 371.3875pt>
+File: ./images/Division.jpg Graphic file (type jpg)
+<use ./images/Division.jpg>
+Package pdftex.def Info: ./images/Division.jpg  used on input line 439.
+(pdftex.def)             Requested size: 539.62016pt x 222.83421pt.
+
+Overfull \hbox (39.13617pt too wide) in paragraph at lines 439--441
+ [][] 
+ []
+
+[12 <./images/boolean.jpg> <./images/Division.jpg>] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 529--539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--444
+Underfull \hbox (badness 10000) in paragraph at lines 529--539
 
  []
 
-[11] [12] [13] (./Python Tutorial.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--539
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
+
+ []
+
+[16]
+<./images/4_1.png, id=80, 1025.8325pt x 200.75pt>
+File: ./images/4_1.png Graphic file (type png)
+<use ./images/4_1.png>
+Package pdftex.def Info: ./images/4_1.png  used on input line 655.
+(pdftex.def)             Requested size: 512.91501pt x 100.37474pt.
+
+Overfull \hbox (12.43102pt too wide) in paragraph at lines 655--657
+ [][] 
+ []
+
+[17 <./images/4_1.png>] [18] [19] [20] [21] [22] (./Python Tutorial.aux) ) 
 Here is how much of TeX's memory you used:
- 17944 strings out of 480608
- 338733 string characters out of 5903631
- 862442 words of memory out of 5000000
- 33531 multiletter control sequences out of 15000+600000
- 540218 words of font info for 54 fonts, out of 8000000 for 9000
+ 18388 strings out of 480608
+ 346148 string characters out of 5903631
+ 882725 words of memory out of 5000000
+ 33954 multiletter control sequences out of 15000+600000
+ 540564 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,60p,463b,1828s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb>
-Output written on "Python Tutorial.pdf" (14 pages, 206158 bytes).
+ 60i,10n,60p,666b,1843s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "Python Tutorial.pdf" (23 pages, 465847 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
